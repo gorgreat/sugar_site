@@ -1,0 +1,153 @@
+.reviews {
+  padding-bottom: 30px;
+  background-color: @creamColor;
+}
+
+.reviews__title {
+  margin-top: 0;
+  font-size: 28px;
+  text-align: center;
+  color: @crimsonColor;
+}
+.reviews__wrapper {
+  margin: 0 30px;
+}
+.review__item {
+  text-align: center;
+}
+
+.review__img {
+  display: block;
+  width: 121px;
+  height: 121px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.reviews__author {
+  font-size: 20px;
+  color: @crimsonColor;
+}
+
+.reviews__text {
+  color: @darkblueColor;
+}
+
+.reviews__items {
+  position: relative;
+}
+
+.reviews__arrow {
+  position: absolute;
+  top: 10%;
+  width: 29px;
+  height: 44px;
+  background-image: url(../img/sprite.png);
+  cursor: pointer;
+  transition: all 0.1s linear;
+  &:hover {
+    opacity: .5;
+  }
+}
+
+.reviews__left-arrow {
+  left: -20px;
+  background-position: 0 -252px;
+}
+
+.reviews__right-arrow {
+  right: -20px;
+  background-position: 0 -297px;
+}
+
+.reviews__controls {
+  display: flex;
+  justify-content: center;
+}
+
+.control__item {
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  background-color: #eee;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  &:hover {
+    background-color: #bbb;
+  }
+}
+
+@media @tablet-widths {
+  .reviews {
+    padding: 100px 0;
+    background-image: url(../img/reviews_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+  }
+  .reviews__title {
+    margin-bottom: 40px;
+    position: relative;
+    font-family: @decorFont;
+    font-weight: normal;
+    font-size: 85px;
+    line-height:0;
+    padding-bottom: 70px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 450px;
+      height: 2px;
+      left: 50%;
+      margin-left: -225px;
+      background: url(../img/reviews_line.png) no-repeat;
+    }
+  }
+  .review__item {
+    text-align: left;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 30px;
+    margin-bottom: 30px;
+  }
+  .review__img {
+    margin-right: 30px;
+  }
+  .reviews__author {
+    margin-top: 0;
+  }
+  .reviews__arrow {
+    top: 50%;
+    margin-top: -44px;
+  }
+}
+@media @medium-desktop-widths {
+  .reviews__items {
+    width: 770px;
+    margin: 0 auto;
+  }
+}
+.dot-active {
+   background-color: #bbb; 
+}
+
+
+.review_anim {
+  animation-name: review_anim;
+  animation-duration: 2s;
+}
+
+@keyframes review_anim {
+  from {
+    opacity: 0.1;
+    
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
