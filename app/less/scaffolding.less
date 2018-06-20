@@ -1,0 +1,137 @@
+@font-face {
+  font-family: 'pf_beausans_proregular';
+  src: url('../fonts/pfbeausanspro-reg.woff2') format('woff2'), url('../fonts/pfbeausanspro-reg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Andantinoscript';
+  src: url('../fonts/Andantinoscript.woff') format('woff'), url('../fonts/Andantinoscript.ttf') format('truetype'), url('../fonts/Andantinoscript.svg#Andantinoscript') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.wrapper {
+  .container();  
+}
+body {
+  font-family: @bodyFont;
+  color: @creamColor;
+  font-size: 16px;
+}
+h1 {
+  margin: 0;
+}
+
+a {
+  transition: all 0.1s linear; 
+}
+
+::-webkit-input-placeholder {
+  color: @darkblueColor;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: @darkblueColor;
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  color: @darkblueColor;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: @darkblueColor;
+  opacity: 1;
+}
+input:valid {
+  background-color: #fff;
+}
+
+.form___btn {
+  width: 100%;
+  max-width: 290px;
+  margin:  0 auto;
+  line-height: 42px;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  border-radius: 10px;
+  color: @crimsonColor;
+  background: #e2c495;
+  background: linear-gradient(#e2c495 0%, #cc9e62 100%);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), inset 0 -3px 2px rgba(150, 80, 15, 0.5);
+  margin-bottom: 10px;
+  &:hover{
+    background: linear-gradient(#cc9e62 0%, #e2c495 100%);
+  }  
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.agry {
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+.agry a {
+  color: @creamColor;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/*Наверх*/
+.scrollTop {
+  width: 44px;
+  height: 44px;
+  bottom: 70px;
+  right: 10%;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
+  background-position: 0 -352px;
+  transition: none;
+  &:hover {
+    background-position: 0 -396px;  
+  }
+}
+
+
+
+.fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
